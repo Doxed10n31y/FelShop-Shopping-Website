@@ -1,0 +1,128 @@
+<!DOCKTYPE html>
+<html>
+  <head>
+    <title>Login</title>
+    
+    <style>
+      body {
+        background: #000 url('https://i.ibb.co/kDt78Xz/received-974679213777716.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .container {
+        background-color: #565656;
+        color: #ffffff;
+        align-content: center;
+        margin-top: 100px;
+        padding-top: 20px;
+        margin-left: 40px;
+        margin-right: 40px;
+        padding-bottom: 10px;
+        margin-bottom: 100px;
+        border-radius: 40px 0px 40px 0px;
+        box-shadow: 5px 6px 8px orange;
+      }
+      .login {
+        background-image: url('https://i.ibb.co/kDt78Xz/received-974679213777716.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 20px 0px 0px 0px;
+        text-align: center;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        font-size: 50px;
+        font-family: courier;
+        letter-spacing: 10px;
+        margin-right: 30px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-shadow: 2px 2px 5px orange;
+      }
+      h1 {
+        text-shadow: 2px 2px 5px orange;
+      }
+      .contents {
+        margin-left: 20px;
+      }
+      input {
+        border: 0px;
+        font-size: 18px;
+        padding: 10px;
+        padding-right: 30px;
+        border-radius: 10px;
+        margin-left: 10px;
+        overflow: hidden;
+        box-shadow: 0px 5px 15px orange;
+      }
+      button {
+        border: 0px;
+        color: #ffffff;
+        background-color: #565656;
+        font-size: 30px;
+        margin-top: 20px;
+        letter-spacing: 6px;
+        cursor: pointer;
+        text-shadow: 2px 2px 5px orange;
+      }
+      p {
+        margin-left: 10px;
+        text-shadow: 2px 2px 5px orange;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="contents">
+        <div class="bg">
+          <h1 class="login"><span style="text-decoration: underline;">FelShop</span><br><br><span style="font-size: 40px;">Login</span></h1>
+        </div>
+        <h1>Username</h1>
+        <form id="contactForm" onsubmit="submitForm(event)">
+          <input type="Username" placeholder="Username" id="usr">
+          <h1>Password</h1>
+          <input type="Password" placeholder="Password" id="pwd">
+          <br>
+          <input type="checkbox" id="chk">Show Password
+          <center>
+            <button type="submit">Login</button>
+          </center>
+        </form>
+        <div class="shadow" id="response" style="display: none;"></div>
+        <p>Do you have already an Account? <a style="color: #fff;" href="#">Sign up</a></p>
+      </div>
+    </div>
+    <script>
+      const pwd = document.getElementById("pwd")
+      const chk = document.getElementById("chk")
+      
+      chk.onchange = function(e) {
+        pwd.type = chk.checked ? "text" : "password";
+      };
+    </script>
+    <script>
+      function submitForm(event) {
+        event.preventDefault();
+
+        const usr = document.getElementById("usr").value;
+        const pwd = document.getElementById("pwd").value;
+        const chk = document.getElementById("chk").value;
+      
+        if (usr && pwd) {
+        // Perform actions with the form data
+        // For this example, we'll just display a success message
+        const responseElement = document.getElementById("response");
+        responseElement.style.display = "block";
+        responseElement.textContent = "Login successfully!";
+        responseElement.style.color = "green";
+
+        // Reset the form after submission
+        document.getElementById("contactForm").reset();
+      }
+      else {
+        alert("Please fill all the fields!");
+      }
+    }
+    </script>
+  </body>
+</html>
+  

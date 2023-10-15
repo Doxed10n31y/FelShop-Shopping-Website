@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Home</title>
+  
+  <!-- HTML -->
+  
+
+  <!-- Custom Styles -->
+  <style>
+    body {
+      background: url('/IMG_20220803_180018.jpg');
+    }
+    .center {
+      display: flex;
+      justify-content: space-between;
+    }
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #C4C4C5;
+      min-width: 160px;
+      box-shadow: 0px 9px 15px 1px rgba(0, 0, 0, 0.3);
+    }
+    .dropdown-content a {
+      color: black;
+      padding: 5px 15px;
+      text-decoration: none;
+      display: block;
+    }
+    .dropdown-content a:hover {
+      background-color: #f1f2f2;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .dropdown:hover .dropdownbutton {
+      background-color: gray;
+    }
+    .dropdownbutton {
+      background-color: lightgray;
+      color: orange;
+      padding: 10px;
+      font-size: 15px;
+      border: none;
+      cursor: pointer;
+      margin: 0px 0px 8px 2px;
+    }
+    ul {
+      display: flex;
+      justify-content: space-around;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: transparent;
+    }
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 5px 17px;
+      text-decoration: none;
+      
+    }
+    li {
+      float: left;
+    }
+    li a:hover {
+      background-color: orange;
+    }
+    .active {
+      background-color: orange;
+    }
+    .header {
+      color: #fff;
+    }
+    a {
+      color: #fff;
+      background-color: transparent;
+      border: 0;
+      font-size: 16px;
+      text-decoration: none;
+    }
+    .products {
+      color: #fff;
+      display: flex;
+      justify-content: space-around;
+    }
+    img {
+      height: 100px;
+      width: 100px;
+     
+    }
+    .style {
+      color: yellow;
+      text-align: center;
+      font-size: 35px;
+      animation: text-flicker 3s linear infinite;
+      }
+
+      #offset {
+        animation: letter-linening 2s linear infinite;
+      }
+
+      @keyframes text-flicker {
+        0% {
+          opacity: 0.1;
+          text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
+        }
+
+        2% {
+          opacity: 1;
+          text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
+        }
+        8% {
+          opacity: 0.1;
+          text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
+        }
+        9% {
+          opacity: 1;
+          text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
+        }
+        12% {
+          opacity: 0.1;
+          text-shadow: 0px 0px rgba(242, 22, 22, 1);
+        }
+        20% {
+          opacity: 1;
+          text-shadow: 0px 0px 29px rgba(242, 22, 22, 1)
+        }
+        25% {
+          opacity: 0.3;
+          text-shadow: 0px 0px 29px rgba(242, 22, 22, 1)
+        }
+        30% {
+          opacity: 1;
+          text-shadow: 0px 0px 29px rgba(242, 22, 22, 1)
+        }
+        70% {
+          opacity: 0.7;
+          text-shadow: 0px 0px 29px rgba(242, 22, 22, 1)
+        }
+        72% {
+          opacity: 0.1;
+          text-shadow: 0px 0px 29px rgba(242, 22, 22, 1)
+        }
+        77% {
+          opacity: 1;
+          text-shadow: 0px 0px 29px rgba(242, 22, 22, 1)
+        }
+        100% {
+          opacity: 0.1;
+          text-shadow: 0px 0px 29px rgba(242, 22, 22, 1)
+        }
+      }
+    span {
+      color: orangered;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="center">
+    <div class="dropdown">
+      <button class="dropdownbutton" role="menubar">Menu</button>
+      <div class="dropdown-content">
+        <a href="/FelShop_SignUp.html">Sign up</a>
+        <a href="/FelShop_Login.html">Log in</a>
+      </div>
+    </div>
+    <img style="border-radius: 100px; margin-right: 5px; height: 50px; width: 50px;" src="/Screenshot_2023-10-06-23-26-26-07.png" alt="logo" height="15" width="15">
+  </div>
+  
+  <ul>
+    <li> <a class="active" href="/FelShop_Home.html"> Home </a> </li>
+    <li> <a href="/FelShop_Products.html"> Products </a> </li>
+    <li> <a href="/FelShop_About.html"> About </a> </li>
+    <li> <a href="/FelShop_contact.html">Contact Us</a> </li>
+  </ul>
+  <hr>
+  
+  <div class="header">
+    <h1>FelShop<br>Online Shopping</h1>
+    <p>Order all you want <br> <span style="margin-left: 10px;">Only here in <em>FelShop</em></span></p>
+  </div>
+  <h1 style="color: #fff; margin-left: 15px;">Products</h1>
+  <div class="products">
+    <img src="/1696242108808.jpg" alt="product1">
+    <img src="/1696242307829.jpg" alt="product2">
+    <img src="/81ADRpAX19L._AC_UF1000,1000_QL80_.jpg" alt="product3">
+  </div>
+    <br>
+    <div style="display: flex; justify-content: space-around; margin-right: 0px; color: #fff;">
+      <div>
+        <h3>₱599<br><a href="" type="submit">Buy</a></h3>
+      </div>
+      <div>
+        <h3>₱6,999 <br> <a href="" type="submit">Buy</a></h3>
+      </div>
+      <div>
+        <h3>₱599 <br> <a href="" type="submit">Buy</a></h3>
+      </div>
+    </div>
+    <h1 class="style"> THIS WEBSITE IS STILL<br><span>!</span> UNDER CONSTRUCTION <span>!</span></h1>
+</body>
+</html>

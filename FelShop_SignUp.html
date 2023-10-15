@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Sign Up</title>
+  
+  <!-- HTML -->
+  
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 30px 60px 0px 50px;
+      text-align: center;
+      background: orange;
+      color: whitesmoke;
+    }
+    h1 {
+      letter-spacing: 10px;
+      text-decoration: underline;
+      text-shadow: 6px 3px 5px orange;
+      font-family: courier;
+    }
+    .container {
+      background: #E4E4E4;
+      padding: 10px 0px 10px 0px;
+      border-radius: 20px;
+      box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.5);
+    }
+    input {
+      border-radius: 5px;
+      padding: 10px 10px 10px 10px;
+      border: none;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+      margin-bottom: 10px;
+    }
+    .sign {
+      text-decoration: none;
+      color: orange;
+      margin-top: 50px;
+      font-size: 30px;
+    }
+    .pwd {
+      margin-bottom: 30px;
+    }
+    form {
+      color: black;
+      text-shadow: 0px 0px 8px gray;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="head">
+      <h1>FelShop</h1>
+      <h2 style="color: white; letter-spacing: 3px; font-size: 30px; text-shadow: 6px 3px 5px orange; font-family: courier;">Sign Up</h2>
+    </div>
+    <form id="contactForm" onsubmit="submitForm(event)">
+      <h5>Fullname <br>
+        <input type="name" placeholder="First Name">
+        <br>
+        <input type="name" placeholder="Last Name">
+        <br>
+        <br>
+        Date of birth <br>
+        <input type="date">
+        <br>
+        <br>
+        Gmail Address <br>
+        <input id="gmail" type="email" placeholder="Example@gmail.com"> <br>
+        Phone Number <br>
+        <input id="nmbr" type="number" placeholder="Phone Number">
+        <br>
+        <br>
+        Username <br>
+        <input type="name" placeholder="Username" id="usr"> <br>
+        Password <br>
+        <input id="pwd" class="pwd" type="password" placeholder="Password">
+      </form>
+      <br>
+      <div id="response"></div>
+        <a class="sign" href="">Sign Up</a>
+        <p style="font-size: 15px;">Do you have already an Account? <a style="color: orange;" href="/FelShop_Login.html">Log In</a></p>
+      </div>
+    </h5>
+  </div>
+  <!-- Project -->
+  <script>
+  function submitForm(event) {
+  event.preventDefault();
+
+  const name = document.getElementById("gmail").value;
+  const email = document.getElementById("nmbr").value;
+  const message = document.getElementById("pwd").value;
+
+  if (name && email && message) {
+    // Perform actions with the form data
+    // For this example, we'll just display a success message
+    const responseElement = document.getElementById("response");
+    responseElement.style.display = "block";
+    responseElement.textContent = "Message sent successfully!";
+    responseElement.style.color = "green";
+
+    // Reset the form after submission
+    document.getElementById("contactForm").reset();
+  } else {
+    alert("Please fill in all fields!");
+  }
+}
+</script>
+</body>
+</html>

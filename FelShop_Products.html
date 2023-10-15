@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Products</title>
+  
+  <!-- HTML -->
+  
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 5px 2px 0px 2px;
+      background: orange;
+      color: white;
+      font-size: 17px;
+    }
+    .center {
+      display: flex;
+      justify-content: space-between;
+    }
+    .dropdown {
+      position: relative;
+      display: inline-block;
+      justify-content: space-between;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #C4C4C5;
+      min-width: 160px;
+      box-shadow: 0px 9px 15px 1px rgba(0, 0, 0, 0.3);
+    }
+    .dropdown-content a {
+      color: black;
+      padding: 5px 15px;
+      text-decoration: none;
+      display: block;
+    }
+    .dropdown-content a:hover {
+      background-color: #f1f2f2;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .dropdown:hover .dropdownbutton {
+      background-color: gray;
+    }
+    .dropdownbutton {
+      background-color: lightgray;
+      color: orange;
+      padding: 10px;
+      font-size: 15px;
+      border: none;
+      cursor: pointer;
+      margin: 0px 0px 8px 2px;
+    }
+    ul {
+      display: flex;
+      justify-content: space-around;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: transparent;
+    }
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 5px 17px;
+      text-decoration: none;
+      
+    }
+    li {
+      float: left;
+    }
+    li a:hover {
+      background-color: orange;
+    }
+    .active {
+      background-color: black;
+    }
+    .pro1 {
+      display: flex;
+      background-color: lightgray;
+      padding: 10px 0px 10px 0px;
+      margin: 20px 15px 0px 15px;
+      box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.5);
+    }
+    .pro2 {
+      display: flex;
+      background-color: lightgray;
+      padding: 15px 0px 0px 0px;
+      margin: 0px 15px 0px 15px;
+      box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.5);
+    }
+    .pro3 {
+      display: flex;
+      background-color: lightgray;
+      padding: 15px 0px 0px 0px;
+      margin: 0px 15px 0px 15px;
+      box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.5);
+    }
+    .content {
+      margin: 10px 20px 0px 10px;
+      height: 100px;
+      width: 125px;
+      box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.5);
+    }
+    .height {
+      height: 125px;
+      width: 115px;
+      box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.5);
+      margin: 0px 10px 0px 15px;
+    }
+    h1 {
+      text-align: center;
+      text-shadow: 7px 1px 5px black;
+    }
+    a {
+      color: white;
+    }
+    .width {
+      height: 125px;
+      width: 125px;
+      margin: 0px 10px 15px 15px;
+     box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.5);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="center">
+    <div class="dropdown">
+      <button class="dropdownbutton">Menu</button>
+      <div class="dropdown-content">
+        <a href="/FelShop_SignUp.html">Sign up</a>
+        <a href="/FelShop_Login.html">Log in</a>
+      </div>
+    </div>
+    <img style="border-radius: 100px; margin-right: 5px;" src="/Screenshot_2023-10-06-23-26-26-07.png" alt="logo" height="50" width="50">
+  </div>
+  <ul>
+    <li> <a href="/FelShop_Home.html"> Home </a> </li>
+    <li> <a class="active" href="/FelShop_order.html"> Products </a> </li>
+    <li> <a href="/FelShop_About.html"> About </a> </li>
+    <li> <a href="/FelShop_contact.html"> Contact Us </a> </li>
+  </ul>
+  <h1 style="text-decoration: underline; letter-spacing: 10px;">FelShop</h1>
+  <h1>Products</h1>
+  <br>
+  <div class="pro1">
+    <img class="content" src="/1696242108808.jpg" alt="product1">
+    <p><span style="text-decoration: underline;"><a href="/1696242108808.jpg">Product 1</a></span> <br>Type: Shoes <br> color: Black with white <br> Prize: ₱599 <br> <button style="border: 0px; background-color: orange; color: #fff;" type="submit">Buy</button></p>
+  </div>
+  <br>
+  <div class="pro2">
+    <img class="height" src="/1696242307829.jpg" alt="product1">
+    <p><span><a href="/1696242307829.jpg">Product 2</a></span> <br>Type: Cell Phone <br>Brand: Realme C35<br> color: White <br> Prize: ₱6,999 <br> <button style="border: 0px; background-color: orange; color: #fff;" type="submit">Buy</button></p>
+  </div>
+  <br>
+  <div class="pro3">
+    <img class="width" src="/81ADRpAX19L._AC_UF1000,1000_QL80_.jpg" alt="product1">
+    <p><span><a href="/1696242307829.jpg">Product 3</a></span> <br>Type: Ball <br> color: Orange <br> Prize: ₱599 <br> <button style="border: 0px; background-color: orange; color: #fff;" type="submit">Buy</button></p>
+  </div>
+  <br>
+  <a href="/FelShop_Home.html" style="border: 0; background: transparent; color: orange; font-size: 18px; text-decoration: none;" type="submit">Back to home</a>
+  <!-- Project -->
+  <script src="main.js"></script>
+</body>
+</html>
